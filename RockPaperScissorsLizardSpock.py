@@ -15,8 +15,6 @@ import random
 # helper functions
 
 def name_to_number(name):
-    # delete the following pass statement and fill in your code below
-
     # convert name to number using if/elif/else
     # don't forget to return the result!
     if (name == 'rock'):
@@ -31,9 +29,7 @@ def name_to_number(name):
         return 4
 
 
-def number_to_name(number):
-    # delete the following pass statement and fill in your code below
-    
+def number_to_name(number):  
     # convert number to a name using if/elif/else
     # don't forget to return the result!
     if (number == 0):
@@ -47,10 +43,7 @@ def number_to_name(number):
     else:
         return 'scissors'
 
-def rpsls(player_choice): 
-    # delete the following pass statement and fill in your code below
-    pass
-    
+def rpsls(player_choice):     
     # print a blank line to separate consecutive games
     # IT IS IN THE LAST LINE
     # print out the message for the player's choice
