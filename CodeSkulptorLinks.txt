@@ -1,4 +1,5 @@
 Week 5a
+
 	1 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_3xgUSPu4dp_0.py
 	2 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_O9qUB4n6wQ_0.py
 	3 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_Vp7dGdgJDJ_0.py
@@ -7,7 +8,32 @@ Week 5a
 	6 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_9CqNQxfN4C_0.py
 	
 Week 5b
+
 	1 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_b9tUl8pAQe_0.py
 	2 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_Br8EG92QDe_0.py
 	3 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_oOFungO4IB_0.py
-	4 - 
+	4 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_QYUike7ZOD_0.py
+	5 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_xX5eBPUs5K_0.py
+	
+Week 5 - MiniProject
+
+	1 - http://www.codeskulptor.org/#user46_sRTpmLi2P7_1.py
+	
+Week 6a
+
+	1 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_RCBL9VrV2f_0.py
+	2 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_DA30cNctuo_0.py
+	3 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_X4O2fYoCo8_0.py
+	4 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_y39TJd6LXs_0.py
+	5 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_xhgeBtJSSJ_0.py
+	6 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_NEBtKLq43a_0.py
+	7 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_QFkDFrPtoH_3.py
+	8 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_QFkDFrPtoH_4.py
+	
+Week 6b
+
+	1 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_iRO5SYXMaK_1.py
+	2 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_MhcmxYuB4k_0.py
+	3 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_p9KUzTGMaq_0.py
+	4 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_9dQmX1FEcV_0.py
+	5 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_b9rlo8c59R_0.py
