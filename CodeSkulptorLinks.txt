@@ -15,7 +15,7 @@ Week 5b
 	4 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_QYUike7ZOD_0.py
 	5 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_xX5eBPUs5K_0.py
 	
-Week 5 - MiniProject
+Week 5 - MiniProject - Memory Game
 
 	1 - http://www.codeskulptor.org/#user46_sRTpmLi2P7_1.py
 	
@@ -37,3 +37,33 @@ Week 6b
 	3 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_p9KUzTGMaq_0.py
 	4 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_9dQmX1FEcV_0.py
 	5 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_b9rlo8c59R_0.py
+	6 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_b9rlo8c59R_1.py
+	7 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_b9rlo8c59R_1.py
+	
+Week 6 - MiniProject - BlackJack
+
+	1 - http://www.codeskulptor.org/#user46_ODCusU1wR9_1.py
+	
+Week 7b
+
+	1 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_4aYrekXqGA_0.py
+	2 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_qCgvLEbHrY_0.py
+	3 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_Yzlio56Pfz_0.py
+	4 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_7Ws5DCkCxt_0.py
+	5 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_HnXl7i9RPf_0.py
+	
+Week 7 - MiniProject - SpaceShip
+
+	1 - http://www.codeskulptor.org/#user46_p93UUbgEYn_2.py
+	
+Week 8a
+
+	1 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_lOC2T5Rmvd_0.py
+	2 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_lOC2T5Rmvd_1.py
+	3 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_lOC2T5Rmvd_2.py
+	4 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_lOC2T5Rmvd_3.py
+	5 - http://www.codeskulptor.org/iipp-practice-experimental/#user46_lOC2T5Rmvd_4.py
+	
+Week 8 - MiniProject - RiceRocks
+
+	1 - http://www.codeskulptor.org/#user46_NMnL2joXwJ_0.py
