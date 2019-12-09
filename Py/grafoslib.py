@@ -249,6 +249,7 @@ def ColoracaoGuloso(Grafo):
     for vertice in Grafo.vertices:
         if len(vertice.vizinhos) > n:
             n = len(vertice.vizinhos)
+    n = n + 1
     return n
 
 def Mycielski(n):
