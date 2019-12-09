@@ -281,6 +281,22 @@ def Mycielski(n):
                 
         return M
 
+def CriaArvore(Grafo, M):
+    Grafo.AtualizaDesc
+    n = Grafo.nvertices
+    C = []
+    M2 = CriaMatriz(n)
+    for i in range(n):
+        C.append(i)
+    for i in range(n):
+        if C[i] == 0:
+            for j in range(n):
+                if C[j] != 0 and M[i][j] == 1:
+                    M2[i][j] = 1
+                    M2[j][i] = 1
+                    C[j] = 0
+    return M2
+            
 
 
 

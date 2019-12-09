@@ -99,4 +99,12 @@ Escolha = input('Deseja imprimir a Matriz de Adjacencia? S/N\n')
 Escolha = Escolha.upper()
 if Escolha == 'S':
     PrintMatriz(grafo1.nvertices, M)
-
+if ChecaBipartido(V):
+    Escolha = input('Deseja imprimir os Vetores da Biparticao? S/N\n')
+    Escolha.upper()
+    if Escolha == 'S':
+            printBFS(V)
+Escolha = input('Deseja imprimir a Matriz da Arvore Geradora? S/N\n')
+if Escolha == 'S':
+        MArv = CriaArvore(grafo1, M)
+        PrintMatriz(grafo1.nvertices, MArv)
