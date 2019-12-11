@@ -73,10 +73,16 @@ def MatrizAdjacencias(v, M):
     return M
     
 def PrintMatriz(V, M):
+    String = ''
     for i in range(0,V):
         for j in range(0,V):
-            print(M[i][j], end='\t')
-        print('\n')
+            if j == 0:
+                String = String + str(M[i][j])
+            else:
+                String = String + ' '+str(M[i][j])
+        if i != V-1:
+            String = String + '\n'
+    return String
 
 def NumVertices(v):
     j = 0
@@ -252,18 +258,12 @@ def ColoracaoGuloso(Grafo):
     n = n + 1
     return n
 
-def Mycielski(n):
+def Mycielski(m, n):
     if n == 1:
-        M = CriaMatrizKn(1)
+        M = CriaMatrizKn(m)
         return M
-    elif n == 2:
-        M = CriaMatrizKn(2)
-        return M
-    elif n == 3:
-        M = CriaMatrizCn(5)
-        return M
-    elif n > 3:
-        M2 = Mycielski(n-1)
+    elif n >= 2:
+        M2 = Mycielski(m, n-1)
         M = CriaMatriz(2*len(M2)+1)
         M1 = CriaMatrizCn(len(M2))
         for i in range(len(M2)):

@@ -8,7 +8,7 @@ Escolha1 = int(input('Insira sua escolha: '))
 M = []
 #-Escolha-1-----------------------------------------------------------------------------------------------------------------------------------------OK-#
 if Escolha1 == 0:
-    Opcoes = ['- Carregar um arquivo', '- Digitar as arestas']
+    Opcoes = ['- Carregar um arquivo com as arestas','- Carregar um arquivo com a Matriz de Adjacencias', '- Digitar as arestas']
     print('Escolha uma das opcoes abaixo: ')
     for i in range(len(Opcoes)):
         print (i, Opcoes[i])
@@ -24,15 +24,22 @@ if Escolha1 == 0:
                 NArestas = NArestas + 1
         NVertices = NumVertices(v)
         M = CriaMatriz(NVertices)
-        
-    ##-Escolha-2------------------------------------------------------------------------------------------------------------------------------------OK-#                
+        M = MatrizAdjacencias(v, M)
     elif Escolha == 1:
+        nomearquivo = input('Insira o nome do arquivo: ')
+        with open(nomearquivo, "r") as ins:
+            l = [[int(num) for num in line.split(' ') if num != '\n'] for line in ins]        
+        M = l
+        print (M)
+
+            
+    ##-Escolha-2------------------------------------------------------------------------------------------------------------------------------------OK-#                
+    elif Escolha == 2:
         NArestas = int(input('Numero de arestas: '))
         v = CriaAresta(NArestas)
         NVertices = NumVertices(v)
         M = CriaMatriz(NVertices)
-
-    M = MatrizAdjacencias(v, M)
+        M = MatrizAdjacencias(v, M)
 
 #-Escolha-2-----------------------------------------------------------------------------------------------------------------------------------------OK-#
 elif Escolha1 == 1:
@@ -82,8 +89,9 @@ elif Escolha1 == 1:
         M = CriaMatrizKnm(n, m)
     ##-Escolha-4------------------------------------------------------------------------------------------------------------------------------------OK-#
     elif Escolha == 4:
+        m = int(input('Digite um M para o Km base: '))
         n = int(input('Digite um N para o Mn: '))
-        M = Mycielski(n)
+        M = Mycielski(m, n)
         
         
 grafo1 = MatrizParaGrafo(M)
@@ -98,7 +106,11 @@ print('\t 4 - Numero de cores =', ColoracaoGuloso(grafo1),'(Metodo Guloso)')
 Escolha = input('Deseja imprimir a Matriz de Adjacencia? S/N\n')
 Escolha = Escolha.upper()
 if Escolha == 'S':
-    PrintMatriz(grafo1.nvertices, M)
+    print(PrintMatriz(grafo1.nvertices, M))
+    Escolha1 = input('Deseja salvar a Matriz de Adjacencia em um arquivo? S/N\n')
+    if Escolha1 == 'S':
+        with open('MatrizAdj.txt', 'w') as f:
+            print(PrintMatriz(grafo1.nvertices, M), file=f)
 if ChecaBipartido(V):
     Escolha = input('Deseja imprimir os Vetores da Biparticao? S/N\n')
     Escolha.upper()
@@ -106,5 +118,9 @@ if ChecaBipartido(V):
             printBFS(V)
 Escolha = input('Deseja imprimir a Matriz da Arvore Geradora? S/N\n')
 if Escolha == 'S':
-        MArv = CriaArvore(grafo1, M)
-        PrintMatriz(grafo1.nvertices, MArv)
+    MArv = CriaArvore(grafo1, M)
+    print(PrintMatriz(grafo1.nvertices, MArv))
+    Escolha1 = input('Deseja salvar a Matriz da Arvore em um arquivo? S/N\n')
+    if Escolha1 == 'S':
+        with open('MatrizArv.txt', 'w') as f:
+            print(PrintMatriz(grafo1.nvertices, MArv), file=f)
