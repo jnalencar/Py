@@ -263,7 +263,7 @@ def Mycielski(m, n):
         M = CriaMatrizKn(m)
         return M
     elif n >= 2:
-        M2 = Mycielski(m, n-1)
+        M2 = Mycielski(n-1)
         M = CriaMatriz(2*len(M2)+1)
         M1 = CriaMatrizCn(len(M2))
         for i in range(len(M2)):
@@ -283,7 +283,7 @@ def Mycielski(m, n):
         return M
 
 def CriaArvore(Grafo, M):
-    Grafo.AtualizaDesc
+    Grafo.AtualizaDesc()
     n = Grafo.nvertices
     C = []
     M2 = CriaMatriz(n)
@@ -297,7 +297,25 @@ def CriaArvore(Grafo, M):
                     M2[j][i] = 1
                     C[j] = 0
     return M2
-            
+
+def CriaArvore2(Grafo, M):
+    Grafo.AtualizaDesc()
+    n = Grafo.nvertices
+    v =[]
+    cont = 1
+    ar = CriaMatriz(n)
+    for i in range(n):
+        v.append(0)
+    while cont < n:
+        for i in range(n):
+            for j in range(i+1, n):
+                if(M[i][j] == 1 and v[j] != 1):
+                    v[i] = 1
+                    ar[i][j] = 1
+                    ar[j][i] = 1
+                    cont = cont + 1
+                    break
+    return ar
 
 
 

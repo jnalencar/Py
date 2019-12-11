@@ -89,9 +89,8 @@ elif Escolha1 == 1:
         M = CriaMatrizKnm(n, m)
     ##-Escolha-4------------------------------------------------------------------------------------------------------------------------------------OK-#
     elif Escolha == 4:
-        m = int(input('Digite um M para o Km base: '))
         n = int(input('Digite um N para o Mn: '))
-        M = Mycielski(m, n)
+        M = Mycielski(n)
         
         
 grafo1 = MatrizParaGrafo(M)
@@ -107,10 +106,8 @@ Escolha = input('Deseja imprimir a Matriz de Adjacencia? S/N\n')
 Escolha = Escolha.upper()
 if Escolha == 'S':
     print(PrintMatriz(grafo1.nvertices, M))
-    Escolha1 = input('Deseja salvar a Matriz de Adjacencia em um arquivo? S/N\n')
-    if Escolha1 == 'S':
-        with open('MatrizAdj.txt', 'w') as f:
-            print(PrintMatriz(grafo1.nvertices, M), file=f)
+    with open('out.txt', 'w') as f:
+        print(PrintMatriz(grafo1.nvertices, M), file=f)
 if ChecaBipartido(V):
     Escolha = input('Deseja imprimir os Vetores da Biparticao? S/N\n')
     Escolha.upper()
@@ -118,9 +115,5 @@ if ChecaBipartido(V):
             printBFS(V)
 Escolha = input('Deseja imprimir a Matriz da Arvore Geradora? S/N\n')
 if Escolha == 'S':
-    MArv = CriaArvore(grafo1, M)
-    print(PrintMatriz(grafo1.nvertices, MArv))
-    Escolha1 = input('Deseja salvar a Matriz da Arvore em um arquivo? S/N\n')
-    if Escolha1 == 'S':
-        with open('MatrizArv.txt', 'w') as f:
-            print(PrintMatriz(grafo1.nvertices, MArv), file=f)
+        MArv = CriaArvore2(grafo1, M)
+        print(PrintMatriz(grafo1.nvertices, MArv))
