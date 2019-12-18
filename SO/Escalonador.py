@@ -1,27 +1,32 @@
-class processo:
-    def __init__(self, tempo, tipo, estado = 'novo'):
-        self.tempo = tempo
-        self.tipo = tipo
-        if estado:
-            self.estado = estado
-        else:
-            self.estado = 'novo'
+from Escalonadorlib import *
 
-    def __str__(self):
-        return str(self.tempo)+' '+str(self.tipo)
-
-def ComparaPrimeiros(M, k):
-    j = 3000
-    for i in range(len(M)):
-        if j > M[i][0].tempo:
-            j = M[i][0].tempo
-            k = i
-    return k
-
+def UltimaVolta():
+    global tempo
+    global v
+    global M
+    global popz
+    k = 0
+##    for vec in M:
+##        for pross in vec:
+##            print (pross, end=' ')
+##        print()
+##    print()
+##    print ('------------------------------------------------')
+    line = ComparaPrimeiros(M, k, v)
+    if len(M[line]) == 1:
+        v[line] = ' Concluido '
+    if v[line] != ' Concluido ':
+        v[line] = ' Em espera '
+    if M[line] != []:
+        popz = M[line].pop(0).tempo
+    tempo = tempo + popz
+    print ('Total de unidades de tempo gastas (ao todo):',tempo)
 
 M = []
 tempo = 0
-with open('escal.txt', "r") as ins:
+print ('O arquivo deve estar no mesmo diretório do programa.')
+nomearquivo = input('Insira o nome do arquivo: ')
+with open(nomearquivo, "r") as ins:
     for line in ins:
         M.append([])
         v = []
@@ -29,24 +34,31 @@ with open('escal.txt', "r") as ins:
         for i in range(0, len(inner_list), 2):
             v.append(processo(int(inner_list[i]), inner_list[i+1]))
         M[len(M)-1] = v
-v = []
-for i in range(len(M)):
-    v.append('novo')
+
+Final = ChecaFim(M)
+v = CriaVetorResultado(M)
+printInicio(v)
+printV (v)
 while M != []:
+##    print (v)
+    i = 0
     k = 0
 ##    for vec in M:
 ##        for pross in vec:
 ##            print (pross, end=' ')
 ##        print()
 ##    print()
-    line = ComparaPrimeiros(M, k)       
-    popz = M[line].pop(0).tempo
-    if v[line] != 'concluido':
-        v[line] = 'Em espera'
-    if M[line] == []:
-        M.pop(line)
-        v[line] = 'concluido'
-    print (v)
-    
-    tempo = tempo + popz        
-print ('Total de unidades de tempo gastas:',tempo)
+##    print ('------------------------------------------------')
+    line = ComparaPrimeiros(M, k, v)
+    if len(M[line]) == 1:
+        v[line] = ' Concluido '
+    if v[line] != ' Concluido ':
+        v[line] = ' Em espera '
+    if M[line] != []:
+        popz = M[line].pop(0).tempo
+    if M == Final:
+        break
+    tempo = tempo + popz
+    printV(v)
+##    print ('Total de unidades de tempo gastas (até o momento):',tempo)
+UltimaVolta()
